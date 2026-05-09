@@ -1,0 +1,45 @@
+{
+  "name": "@devvir/zipper",
+  "version": "0.1.0",
+  "description": "Read and write gzip-compressed files as if they were ordinary files. Uses pigz for parallel compression when available, falls back to zlib.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "tsc",
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "gzip",
+    "pigz",
+    "compression",
+    "parallel",
+    "stream",
+    "file"
+  ],
+  "author": "Diego Indart <db.indart.dev@gmail.com>",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "^4.1.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  }
+}
